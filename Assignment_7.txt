@@ -1,0 +1,54 @@
+1):-Create a function to calculate the area of a circle by taking radius from user.
+  
+Ans:-
+    
+def function(rad):
+    area=3.14*rad*rad;
+    print(area)
+radius=int(input("enter radius: "))
+print("area is :")
+function(radius)
+
+
+2):-Write a function “perfect()” that determines if parameter number is a perfect number. Use this function in a program that determines and prints all the perfect numbers between 1 and 1000. 
+[An integer number is said to be “perfect number” if its factors, including 1(but not the number itself), sum to the number. E.g., 6 is a perfect number because 6=1+2+3].
+
+Ans:-
+
+     def perfect_number(n):
+    sum=0
+    for x in range(1,n):
+        if n % x == 0:
+            sum+=x
+    if sum==n:
+        print("yes ",n)
+for i in range(1,1001):
+    perfect_number(i)
+
+
+
+
+4):-Write a function to calculate power of a number raised to other ( a^b ) using recursion.
+
+
+Ans:-     
+       import math
+base=int(input("enter the base number: "))
+exponent=int(input("enter the power to be raised: "))
+value=pow(base,exponent)
+print("answer: ",value)
+
+
+
+
+5):-Write a function to find factorial of a number but also store the factorials calculated in a dictionary
+
+Ans:-
+
+    def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+n=int(input('enter a number to calculate the factorial: '))
+print("the factorial is: ",factorial(n))
